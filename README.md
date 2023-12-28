@@ -70,21 +70,54 @@ Return  single element ( one parent element)
   - opening tag in the same  line as return  or ()
 - Nested Components
 
-
 ### React Developer Tools
 
 - top right corner
 - more tools/extensions
 - open chrome web store
 
-### Advanced Configuration
+### Local Images(Public Folder)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- External images ( hosted on a different server) - just need an url
+- local images(public folder) -less perfomant
+- local images(src folder)-better solution for assets since under the hood they get optimzed
+- ```js
+  const image =() =>{ <img/>
+  }
+  ```
 
-### Deployment
+### JSX -CSS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- style prop
+- {} in JSX means  going back to JS Land
+- value is an object  with key/value pairs-capitalized and with ''
+- ```js
+  const Author =()=>(
+  <h4 style={{color:'#617d98',fontSize:'0.75rem',marginTop:'0.5rem'}}>
+  Jordan Moore
+  </h4>
+  )
+  ```
+- css rules  still apply (inline vs external css)
 
-### `npm run build` fails to minify
+### Props
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- enables you to  clean up your code
+- prop object , convenction to call props, 'shakeAndBake' is  an excellent alternative
+- pass as key/value pairs
+- if the prop exists it will return  value, otherwise no value
+- There is no right or wrong while accessing props
+- Alternative you can use  the destructuring  in Vanilla JS
+- Saves Time /Typing
+- Pull out the properties
+- Don't need to reference object anymore
+- no need for all the props.propName
+- destructure inside component or   in function parameters
+-
+
+### Children Prop
+
+- Everything we render  between component  tags
+- during  this course we shall use maily Context Api
+- special prop , has to be 'children'
+- can place anywhere in JSX
